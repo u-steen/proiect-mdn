@@ -1,6 +1,7 @@
 import Board from "./components/Board/Board";
 import Cards from "./components/Cards/Cards";
 import Deck from "./components/Deck/Deck";
+import EndTurnButton from "./components/EndTurnButton.jsx/EndTurnButton";
 
 function Game() {
   return (
@@ -11,6 +12,9 @@ function Game() {
       </div>
       <div className="absolute -bottom-40">
         <Cards />
+      </div>
+      <div className="absolute top-[420px] right-12">
+        <EndTurnButton />
       </div>
     </div>
   );
