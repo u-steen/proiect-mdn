@@ -1,4 +1,5 @@
 import Board from "./components/Board/Board";
+import Cards from "./components/Cards/Cards";
 import Deck from "./components/Deck/Deck";
 
 function Game() {
@@ -6,7 +7,10 @@ function Game() {
     <div className="h-[900px] w-[1600px] bg-blue-200 mx-auto flex justify-center pt-12 relative">
       <Board />
       <div className="absolute right-10 top-40">
-        <Deck className />
+        <Deck />
+      </div>
+      <div className="absolute bottom-0">
+        <Cards />
       </div>
     </div>
   );
