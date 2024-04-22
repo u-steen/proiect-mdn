@@ -13,7 +13,7 @@ const Card = ({ name, image_url, health, power }) => {
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     >
-      <div className="absolute top-0 left-0 h-12 w-12 rounded-full bg-red-500 flex justify-center items-center">
+      <div className="absolute top-0 left-0 h-12 w-12 rounded-full bg-red-500 flex justify-center items-center ">
         <h4>{health}</h4>
       </div>
       <div className="absolute top-0 right-0 h-12 w-12 rounded-full bg-orange-300 flex justify-center items-center">
