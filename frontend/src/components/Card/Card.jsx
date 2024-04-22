@@ -8,7 +8,7 @@ const Card = ({ name, image_url, health, power }) => {
   return (
     <div
       className={`h-[250px] w-[180px] bg-green-800 relative border-2 border-black/20 transition-transform duration-100 ${
-        isHovered && "-translate-y-24 z-10"
+        isHovered && "-translate-y-12 z-10"
       }`}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
