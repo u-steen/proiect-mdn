@@ -1,13 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
 
 const Cards = ({ cardsArr }) => {
-  console.log("Cards", cardsArr);
   const [isHovered, setIsHovered] = useState(false);
+  const [marginClass, setMarginClass] = useState("mr-1");
 
   const handleMouseHover = () => {
     setIsHovered(!isHovered);
   };
+  useEffect(() => {
+    console.log(cardsArr);
+    if (cardsArr.length < 4) {
+      setMarginClass("-ml-1");
+    } else if (cardsArr.length < 6) {
+      setMarginClass("-ml-4");
+    } else if (cardsArr.length < 8) {
+      setMarginClass("-ml-10");
+    } else {
+      setMarginClass("-ml-16");
+    }
+  }, [cardsArr.length]);
   return (
     <div
       className={`w-fit h-[300px] bg-purple-400/60 flex transition-transform duration-75 ${
@@ -16,8 +28,8 @@ const Cards = ({ cardsArr }) => {
       onMouseEnter={handleMouseHover}
       onMouseLeave={handleMouseHover}
     >
-      {cardsArr.map((el) => (
-        <div key={el.id} className="mr-1">
+      {cardsArr.map((el, index) => (
+        <div className={`${index > 0 ? marginClass : ""}`}>
           <Card name={el.name} health={el.health} power={el.power} />
         </div>
       ))}
