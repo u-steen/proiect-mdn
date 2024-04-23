@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End page</title>
+    <link rel="stylesheet" href = "style.css">
+
+</head>
+<body class="endgamepage">
+    <h1 class = "Titlu">The game has ended!</h1>
+    
+    <div class = "meniu" id="mainMenu">
+        <h2><button onclick="document.location='BattleArena.html'">Rematch</button></h2>
+        <h2><button onclick="showMenuInfo()">Game info</button></h2>
+        <h2><button onclick="showSubMenu()">Option</button></h2>
+        <h2><button onclick="document.location='Homepage.html'">Main menu</button></h2>
+        
+    </div>
+
+    <div class="meniu" id="subMenu" style="display: none;">
+        <h1 class="optiuni_titlu">Options</h1>
+        <h2><button class="volume">Volume:</button></h2>
+        <input type="range" name="volume" id="vol">
+        <span class="num">100</span>
+        <audio autoplay class="aud" src="musicendgame.mp3"></audio>
+        <h2><button onclick="showSubMenuInv()">Back</button></h2>
+    </div>
+
+    <div class="meniu" id="MenuInfo" style="display: none;">
+        <h1 class="optiuni_titlu">Game info:</h1>
+        <ul>
+            <li id="cardsPlayed"></li>
+            <li id="dmgDealt"></li>
+            <li id="totalManaUsed"></li>
+            <li id="timePlayed"></li>
+        </ul>
+        <button onclick="showMenuInfoInv()">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
