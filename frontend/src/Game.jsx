@@ -1,8 +1,9 @@
+import React, { useState } from "react";
 import Board from "./components/Board/Board";
 import Cards from "./components/Cards/Cards";
 import Deck from "./components/Deck/Deck";
 import EndTurnButton from "./components/EndTurnButton.jsx/EndTurnButton";
-import { useState } from "react";
+import Healthbar from "./components/Healthbar/Healthbar.jsx";
 
 function Game() {
   const defaultCards = [
@@ -24,6 +25,7 @@ function Game() {
   const handleDraw = (card) => {
     setCards([...cards, card]);
   };
+
   return (
     <div className="h-[900px] w-[1600px] bg-blue-200 mx-auto flex justify-center pt-12 relative overflow-hidden">
       <Board />
@@ -35,6 +37,9 @@ function Game() {
       </div>
       <div className="absolute top-[420px] right-12">
         <EndTurnButton />
+      </div>
+      <div className="absolute bottom-20 right-20">
+        <Healthbar />
       </div>
     </div>
   );
