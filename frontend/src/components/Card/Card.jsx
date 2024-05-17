@@ -27,7 +27,7 @@ const Card = ({ id, name, image_url, health, power }) => {
       <div className="absolute top-0 right-0 h-12 w-12 rounded-full bg-orange-300 flex justify-center items-center">
         <h4>{power}</h4>
       </div>
-      <div className="h-4/5 w-fill bg-blue-400"></div>
+      <div className="h-4/5 w-fill bg-blue-400 hover:bg-blue-700"></div>
       <div className="flex items-center justify-center bg-white h-1/5">
         <h4 className="">{name}</h4>
       </div>
