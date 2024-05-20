@@ -1,4 +1,4 @@
-
+// Cards.jsx
 import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
 
@@ -9,6 +9,7 @@ const Cards = ({ cardsArr }) => {
   const handleMouseHover = () => {
     setIsHovered(!isHovered);
   };
+
   useEffect(() => {
     console.log(cardsArr);
     if (cardsArr.length < 4) {
@@ -23,6 +24,11 @@ const Cards = ({ cardsArr }) => {
       setMarginClass("-ml-24");
     }
   }, [cardsArr.length]);
+
+  const handleDragStart = (event, cardId) => {
+    event.dataTransfer.setData("text/plain", cardId);
+  };
+
   return (
     <div
       className={`w-fit h-[300px] bg-purple-400/60 flex transition-transform duration-75 ${
@@ -32,8 +38,13 @@ const Cards = ({ cardsArr }) => {
       onMouseLeave={handleMouseHover}
     >
       {cardsArr.map((el, index) => (
-        <div className={`${index > 0 ? marginClass : ""}`}>
-          <Card name={el.name} health={el.health} power={el.power} />
+        <div className={`${index > 0 ? marginClass : ""}`} key={el.id}>
+          <div
+            draggable // make the Card draggable
+            onDragStart={(event) => handleDragStart(event, el.id)} // set the data being transferred during drag start
+          >
+            <Card name={el.name} health={el.health} power={el.power} />
+          </div>
         </div>
       ))}
     </div>

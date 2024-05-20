@@ -1,9 +1,8 @@
 // Board.jsx
 import React, { useState } from "react";
-import Card from "../Card/Card";
 import Cards from "../Cards/Cards";
 
-const Board = () => {
+const Board = ({ cards, onRemoveCard }) => {
   const [droppedCards1, setDroppedCards1] = useState([]);
   const [droppedCards2, setDroppedCards2] = useState([]);
 
@@ -13,18 +12,30 @@ const Board = () => {
 
   const handleDrop1 = (event) => {
     event.preventDefault();
-    const cardId = event.dataTransfer.getData("text/plain");
-    const draggedCard = document.getElementById(cardId);
-    setDroppedCards1([...droppedCards1, { id: cardId }]);
-    event.target.appendChild(draggedCard);
+    if (droppedCards1.length >= 5) {
+      alert("Maximum of 5 cards can be placed in this area.");
+      return;
+    }
+    const cardId = parseInt(event.dataTransfer.getData("text/plain"), 10);
+    const draggedCard = cards.find(card => card.id === cardId);
+    if (draggedCard) {
+      setDroppedCards1([...droppedCards1, draggedCard]);
+      onRemoveCard(cardId);
+    }
   };
 
   const handleDrop2 = (event) => {
     event.preventDefault();
-    const cardId = event.dataTransfer.getData("text/plain");
-    const draggedCard = document.getElementById(cardId);
-    setDroppedCards2([...droppedCards2, { id: cardId }]);
-    event.target.appendChild(draggedCard);
+    if (droppedCards2.length >= 5) {
+      alert("Maximum of 5 cards can be placed in this area.");
+      return;
+    }
+    const cardId = parseInt(event.dataTransfer.getData("text/plain"), 10);
+    const draggedCard = cards.find(card => card.id === cardId);
+    if (draggedCard) {
+      setDroppedCards2([...droppedCards2, draggedCard]);
+      onRemoveCard(cardId);
+    }
   };
 
   return (
