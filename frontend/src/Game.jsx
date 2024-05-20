@@ -1,13 +1,10 @@
-// Game.jsx
 import React, { useState } from "react";
 import Board from "./components/Board/Board";
 import Cards from "./components/Cards/Cards";
 import Deck from "./components/Deck/Deck";
 import EndTurnButton from "./components/EndTurnButton.jsx/EndTurnButton";
-import Healthbar1 from "./components/Healthbar/Healthbar1.jsx";
-import Healthbar2 from "./components/Healthbar2/Healthbar2.jsx";
-import ManaBar1 from "./components/ManaBar1/ManaBar1.jsx";
-import ManaBar2 from "./components/ManaBar2/ManaBar2.jsx";
+import Healthbar from "./components/Healthbar/Healthbar";
+import ManaBar from "./components/ManaBar/ManaBar";
 
 function Game() {
   const defaultCards = [
@@ -43,11 +40,14 @@ function Game() {
     },
   ];
   const [cards, setCards] = useState(defaultCards);
-  const [mana, setMana] = useState(20); // Adaugă un state pentru mana
+  const [walterMana, setWalterMana] = useState(20); // Mana lui Walter
+  const [jesseMana, setJesseMana] = useState(20); // Mana lui Jesse
+  const [walterHealth, setWalterHealth] = useState(75); // HealthBar-ul lui Walter
+  const [jesseHealth, setJesseHealth] = useState(50); // HealthBar-ul lui Jesse
 
   const handleDraw = (card) => {
-    if (mana >= 2) {
-      setMana(prevMana => prevMana - 2);
+    if (walterMana >= 2) {
+      setWalterMana(prevMana => prevMana - 2);
       setCards([...cards, card]);
     } else {
       console.log("Not enough mana to draw a card!");
@@ -60,38 +60,39 @@ function Game() {
 
   const handleEndTurn = () => {
     console.log("End turn");
-    setMana(prevMana => prevMana + 5); // Adăugăm 5 mana la începutul fiecărei noi ture
+    setWalterMana(prevMana => prevMana + 5); // Adauga 5 mana lui Walter dupa o tura
+    setJesseMana(prevMana => prevMana + 5); // Adauga 5 mana lui Jesse dupa o tura
   };
 
   return (
     <div className="h-[100vh] w-[100vw] bg-blue-200 mx-auto flex justify-center pt-12 relative overflow-hidden">
       <Board cards={cards} onRemoveCard={handleRemoveCard} />
       <div className="absolute right-10 top-40">
-        <Deck drawCallback={handleDraw} disabled={mana < 2} />
+        <Deck drawCallback={handleDraw} disabled={walterMana < 2} />
       </div>
       <div className="absolute -bottom-40">
         <Cards cardsArr={cards} />
       </div>
       <div className="absolute top-[420px] right-12">
-        <EndTurnButton endTurnCallback={handleEndTurn} /> {/* Transmiterea funcției de callback */}
+        <EndTurnButton endTurnCallback={handleEndTurn} /> {/* Pass the end turn callback */}
       </div>
 
       <div className="absolute bottom-20 right-20">
         Walter
-        <Healthbar1 />
+        <Healthbar health={walterHealth} /> {/* Pass Walter's health */}
       </div>
       <div className="absolute bottom-40 right-20">
         Mana
-        <ManaBar1 mana={mana} />
+        <ManaBar mana={walterMana} /> {/* Pass Walter's mana */}
       </div>
 
       <div className="absolute top-20 right-20">
         Jesse
-        <Healthbar2 />
+        <Healthbar health={jesseHealth} /> {/* Pass Jesse's health */}
       </div>
       <div className="absolute top-10 right-20">
         Mana
-        <ManaBar2 />
+        <ManaBar mana={jesseMana} /> {/* Pass Jesse's mana */}
       </div>
     </div>
   );
