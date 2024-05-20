@@ -8,6 +8,8 @@ STRUCTURA DE BAZA:
 backend/
 |-- config/
 |   |-- db.js
+|-- database
+|   |-- database.sql
 |-- node_modules/
 |   |...
 |-- routes/
