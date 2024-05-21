@@ -1,10 +1,10 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'admin',
-  database: 'card_game'
+  database: 'database_1'
 });
 
 connection.connect((err) => {
@@ -16,3 +16,4 @@ connection.connect((err) => {
 });
 
 module.exports = connection;
+
