@@ -1,10 +1,30 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import "./index.css";
-import Game from "./Game.jsx";
+import Homepage from './components/HomePage/Homepage';
+import Endpage from './components/EndPage/Endpage';
+import Game from './Game';
+import Notfound from './components/NotFoundPage/NotFoundPage';
+
+const router = createBrowserRouter([
+  {
+  path: "/",
+  element: <Homepage />,
+  errorElement: <Notfound />
+},
+  {
+  path: "/game",
+  element: <Game />
+},
+  {
+  path: "/endpage",
+  element: <Endpage />
+}
+]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Game />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

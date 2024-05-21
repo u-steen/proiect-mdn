@@ -5,6 +5,7 @@ import Deck from "./components/Deck/Deck";
 import EndTurnButton from "./components/EndTurnButton.jsx/EndTurnButton";
 import Healthbar from "./components/Healthbar/Healthbar";
 import ManaBar from "./components/ManaBar/ManaBar";
+import {Link} from 'react-router-dom';
 
 function Game() {
   //Ii dam lui Player1 un set de carti
@@ -115,6 +116,11 @@ function Game() {
         Mana
         <ManaBar mana={currentPlayer === 'Walter' ? jesseMana : walterMana} />
       </div>
+      <h2>
+        <button className="absolute left-10 bottom-20 bg-white p-4 rounded shadow-md text-green-600">
+          <Link to="/endpage">Resign/Forfeit</Link>
+        </button>
+      </h2>
     </div>
   );
 }

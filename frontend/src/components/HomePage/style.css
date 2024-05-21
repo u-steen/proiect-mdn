@@ -1,0 +1,61 @@
+body {
+    background-image: url(./bg.png);
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+}
+
+.Titlu {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.meniu {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.61);
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+
+}
+
+.meniu button {
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+button {
+    transition: transform 0.3s ease-in-out;
+}
+
+.meniu button:hover {
+    transform: scale(1,1.25);
+}
+
+.meniu .num {
+    color: white;
+    font-size: 30px;
+}
+
+.optiuni_titlu {
+    color: white;
+}
+
+.credits_titlu {
+    color: white;
+    font-size: 35px;
+}
+
+.dev {
+    color: #c13d2b;
+}
