@@ -10,20 +10,20 @@ import {Link} from 'react-router-dom';
 function Game() {
   //Ii dam lui Player1 un set de carti
   const defaultWalterCards = [
-    { id: 1, name: "gigel", health: 4, power: 2 },
-    { id: 2, name: "mirel", health: 1, power: 1 },
-    { id: 3, name: "vasile", health: 1, power: 1 },
-    { id: 4, name: "george", health: 1, power: 1 },
-    { id: 5, name: "florin", health: 1, power: 1 },
+    { id: 1, name: "Walter White", health: 4, power: 2, image_url: "https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png" },
+    { id: 2, name: "Goku", health: 1, power: 1, image_url: "https://wallpapers.com/images/hd/fierce-son-goku-60yc481rwik8mc5q.jpg" },
+    { id: 3, name: "Raiden", health: 1, power: 1, image_url: "https://i.pinimg.com/originals/3e/55/05/3e5505e4ef7f8839f853e85c4a32019d.jpg" },
+    { id: 4, name: "Gordon", health: 1, power: 1, image_url: "https://combineoverwiki.net/images/thumb/2/2b/Gordon_bust_rtb2.jpg/250px-Gordon_bust_rtb2.jpg" },
+    { id: 5, name: "The Courier", health: 1, power: 1, image_url: "https://static.displate.com/857x1200/displate/2021-06-15/697f6d596af621eac58d252f4a85701f_4b1f8e21e57c8d021174b8c32ef40115.jpg" },
   ];
 
   //Ii dam lui Player2 un set de carti
   const defaultJesseCards = [
-    { id: 6, name: "jesse_card1", health: 3, power: 2 },
-    { id: 7, name: "jesse_card2", health: 2, power: 2 },
-    { id: 8, name: "jesse_card3", health: 1, power: 1 },
-    { id: 9, name: "jesse_card4", health: 1, power: 1 },
-    { id: 10, name: "jesse_card5", health: 1, power: 1 },
+    { id: 6, name: "George", health: 3, power: 2, image_url: "https://i.kym-cdn.com/photos/images/newsfeed/000/117/982/1297836486170.jpg" },
+    { id: 7, name: "Snake", health: 2, power: 2, image_url: "https://www.giantbomb.com/a/uploads/scale_small/16/164924/2778683-venom.jpg" },
+    { id: 8, name: "Peter", health: 1, power: 1, image_url: "https://upload.wikimedia.org/wikipedia/en/c/c2/Peter_Griffin.png" },
+    { id: 9, name: "Jesse", health: 1, power: 1, image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Jesse_Pinkman_S5B.png/220px-Jesse_Pinkman_S5B.png" },
+    { id: 10, name: "Iohannis", health: 1, power: 1, image_url: "https://upload.wikimedia.org/wikipedia/commons/3/39/%D0%9A%D0%BB%D0%B0%D1%83%D1%81_%D0%99%D0%BE%D1%85%D0%B0%D0%BD%D0%BD%D0%B8%D1%81_%2852539721210%29.jpg" },
   ];
 
   //Declaram cata mana, health au playeri si care player incepe

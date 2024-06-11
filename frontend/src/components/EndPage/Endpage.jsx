@@ -25,7 +25,7 @@ const EndPage = () => {
   };
 
   return (
-    <div className="bg-gray-500 h-screen w-screen flex justify-center">
+    <div className="bg-gray-500 h-screen w-screen flex justify-center" style={{backgroundImage: 'url(https://i.postimg.cc/3Rgqn0x6/endgame.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
       <h1 className="Titlu">The game has ended!</h1>
       {isMainMenuVisible && (
         <div className="meniu" id="mainMenu">
