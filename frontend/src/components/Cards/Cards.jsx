@@ -43,7 +43,7 @@ const Cards = ({ cardsArr }) => {
             draggable // make the Card draggable
             onDragStart={(event) => handleDragStart(event, el.id)} // set the data being transferred during drag start
           >
-            <Card name={el.name} health={el.health} power={el.power} />
+            <Card id={el.id} name={el.name} health={el.health} power={el.power} image_url={el.image_url} />
           </div>
         </div>
       ))}
