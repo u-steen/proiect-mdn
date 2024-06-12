@@ -1,7 +1,8 @@
+// Board.jsx
 import React, { useState } from "react";
 import Cards from "../Cards/Cards";
 
-const Board = ({ cards, onRemoveCard, currentPlayer }) => {
+const Board = ({ cards, onRemoveCard, currentPlayer, highlightedCardId, onHighlightCard }) => {
   const [droppedCards1, setDroppedCards1] = useState([]);
   const [droppedCards2, setDroppedCards2] = useState([]);
 
@@ -51,27 +52,31 @@ const Board = ({ cards, onRemoveCard, currentPlayer }) => {
 
   return (
     <div>
-      <div className="h-[350px] w-[1000px] bg-green-600 flex flex-col justify-between">
-        <div
-          className="bg-gray-800/40 h-[600px] w-fill"
-          onDrop={handleDrop1}
-          onDragOver={handleDragOver}
-        >
-          {/* Render cards for drop area 1 */}
-          <Cards cardsArr={walterCards} />
+      <div className="h-[350px] w-[1000px] bg-orange-800 flex flex-col justify-between rounded-t-lg bg-opacity-75" style={{border: '10px solid rgba(0, 0, 0, 0)'}}>
+        <div className="bg-gray-800/40 h-[600px] w-fill rounded-b-lg" onDrop={handleDrop1} onDragOver={handleDragOver}>
+          <Cards
+            cardsArr={walterCards}
+            draggable={false}
+            hoverEffect={false}
+            highlightedCardId={highlightedCardId}
+            onHighlightCard={onHighlightCard}
+            backgroundColor="bg-transparent"
+          />
         </div>
       </div>
 
       <div className="h-2 bg-black" />
 
-      <div className="h-[350px] w-[1000px] bg-green-600 flex flex-col justify-between">
-        <div
-          className="bg-gray-800/40 h-[600px] w-fill"
-          onDrop={handleDrop2}
-          onDragOver={handleDragOver}
-        >
-          {/* Render cards for drop area 2 */}
-          <Cards cardsArr={jesseCards} />
+      <div className="h-[350px] w-[1000px] bg-orange-800 flex flex-col justify-between rounded-b-lg bg-opacity-75" style={{border: '10px solid rgba(0, 0, 0, 0)'}}>
+        <div className="bg-gray-800/40 h-[600px] w-fill rounded-b-lg" onDrop={handleDrop2} onDragOver={handleDragOver}>
+          <Cards
+            cardsArr={jesseCards}
+            draggable={false}
+            hoverEffect={false}
+            highlightedCardId={highlightedCardId}
+            onHighlightCard={onHighlightCard}
+            backgroundColor="bg-transparent"
+          />
         </div>
       </div>
     </div>
