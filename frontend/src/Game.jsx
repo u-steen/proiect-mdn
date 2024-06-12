@@ -31,8 +31,8 @@ function Game() {
   const [jesseCards, setJesseCards] = useState(defaultJesseCards);
   const [walterMana, setWalterMana] = useState(20);
   const [jesseMana, setJesseMana] = useState(20);
-  const [walterHealth, setWalterHealth] = useState(75);
-  const [jesseHealth, setJesseHealth] = useState(50);
+  const [walterHealth, setWalterHealth] = useState(20);
+  const [jesseHealth, setJesseHealth] = useState(20);
   const [currentPlayer, setCurrentPlayer] = useState('Walter');
 
   //functie pentru a putea trage carti din deck
@@ -79,14 +79,25 @@ function Game() {
     }
   };
 
+
+  const [highlightedCardId, setHighlightedCardId] = useState(null);
+
+  const handleHighlightCard = (cardId) => {
+    setHighlightedCardId(cardId);
+  };
+
   return (
-    <div className="h-[100vh] w-[100vw] bg-blue-200 mx-auto flex justify-center pt-12 relative overflow-hidden">
+    <div className="h-[100vh] w-[100vw] bg-blue-200 mx-auto flex justify-center pt-12 relative overflow-hidden" style={{backgroundImage: 'url(https://cdn1.epicgames.com/ue/product/Screenshot/FightingArenasAdvert-10-1920x1080-1608b4ce1cf79833dba5507ba0a289c6.jpg?resize=1&w=1920)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
       <div className="absolute left-10 top-20 bg-white p-4 rounded shadow-md">
         <p className="text-xl font-bold">Current Player:</p>
         <p className="text-2xl">{currentPlayer}</p>
       </div>
-      <Board cards={currentPlayer === 'Walter' ? walterCards : jesseCards} onRemoveCard={handleRemoveCard}
-        currentPlayer={currentPlayer} // Asigură-te că transmiti propria tură curentă
+      <Board
+        cards={currentPlayer === 'Walter' ? walterCards : jesseCards}
+        onRemoveCard={handleRemoveCard}
+        currentPlayer={currentPlayer}
+        highlightedCardId={highlightedCardId}
+        onHighlightCard={handleHighlightCard}
       />
 
       <div className="absolute right-10 top-40">
@@ -99,26 +110,26 @@ function Game() {
         <EndTurnButton endTurnCallback={handleEndTurn} />
       </div>
 
-      <div className="absolute bottom-20 right-20">
+      <div className="absolute bottom-20 right-20" style={{ color: 'white' }}>
         {currentPlayer === 'Walter' ? 'Walter' : 'Jesse'}
         <Healthbar health={currentPlayer === 'Walter' ? walterHealth : jesseHealth} />
       </div>
-      <div className="absolute bottom-40 right-20">
+      <div className="absolute bottom-40 right-20" style={{ color: 'white' }}>
         Mana
         <ManaBar mana={currentPlayer === 'Walter' ? walterMana : jesseMana} />
       </div>
 
-      <div className="absolute top-20 right-20">
+      <div className="absolute top-20 right-20" style={{ color: 'white' }}>
         {currentPlayer === 'Walter' ? 'Jesse' : 'Walter'}
         <Healthbar health={currentPlayer === 'Walter' ? jesseHealth : walterHealth} />
       </div>
-      <div className="absolute top-10 right-20">
+      <div className="absolute top-10 right-20" style={{ color: 'white' }}>
         Mana
         <ManaBar mana={currentPlayer === 'Walter' ? jesseMana : walterMana} />
       </div>
       <h2>
-        <button className="absolute left-10 bottom-20 bg-white p-4 rounded shadow-md text-green-600">
-          <Link to="/endpage">Resign/Forfeit</Link>
+        <button className="absolute left-10 bottom-20 bg-white p-4 rounded shadow-md text-green-600" >
+          <Link to ="/endpage">Resign/Forfeit</Link>
         </button>
       </h2>
     </div>
