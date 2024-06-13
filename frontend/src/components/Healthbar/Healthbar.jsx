@@ -1,5 +1,6 @@
 import React from "react";
 
+//Componenta care reprezinta o bara de health de maxim 20
 const Healthbar = ({ health }) => {
     const healthPercentage = (health / 20) * 100;
 
