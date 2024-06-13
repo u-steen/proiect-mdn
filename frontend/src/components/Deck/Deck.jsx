@@ -1,10 +1,19 @@
 // Deck.jsx
 import React from "react";
 
-const Deck = ({ drawCallback }) => {
-  const drawCard = () => {
-    console.log("Drew a card");
-    drawCallback({ id: 20, name: "gica", health: 2, power: 1 }, 2); // Adaugă a doua valoare pentru cantitatea de mana de scăzut
+const Deck = ({ drawCallback, userId }) => {
+  const drawCard = async () => {
+    try {
+      const response = await fetch(`http://localhost:3000/api/card?userId=${userId}`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const newCard = await response.json();
+      console.log("Drew a card:", newCard);
+      drawCallback(newCard);
+    } catch (error) {
+      console.error("Error drawing card:", error);
+    }
   };
 
   return (
