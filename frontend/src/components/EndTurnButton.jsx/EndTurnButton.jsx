@@ -7,8 +7,7 @@ const EndTurnButton = ({ endTurnCallback }) => {
   };
 
   return (
-    <div className="bg-blue-800 w-[140px] h-[60px] hover:bg-blue-700" onClick={handleEndTurn}>
-      End Turn
+    <div className="bg-blue-800 w-[140px] h-[60px] hover:brightness-150  rounded-md overflow-hidden" onClick={handleEndTurn}   style={{backgroundImage: 'url(https://png.pngtree.com/png-clipart/20220705/ourmid/pngtree-finish-button-in-pixel-art-style-png-image_5683603.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
     </div>
   );
 };

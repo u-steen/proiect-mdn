@@ -8,8 +8,7 @@ const Deck = ({ drawCallback }) => {
   };
 
   return (
-    <div className="h-[250px] w-[180px] bg-red-200 hover:bg-red-300" onClick={drawCard}>
-      Click to draw card
+    <div className="h-[250px] w-[180px] bg-red-200 hover:brightness-150  rounded-md overflow-hidden" onClick={drawCard}  style={{backgroundImage: 'url(https://e7.pngegg.com/pngimages/506/902/png-clipart-bicycle-playing-cards-card-game-united-states-playing-card-company-playing-card-back-game-dragon.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
     </div>
   );
 };
