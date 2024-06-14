@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "not-a-test": "echo 'This is not a test'"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,9 @@
     "express": "^4.19.2",
     "mysql": "^2.18.1",
     "mysql2": "^3.9.7"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0"
   }
 }
