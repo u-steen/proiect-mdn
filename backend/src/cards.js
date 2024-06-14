@@ -1,3 +1,4 @@
+// carti
 const cards = [
     { id: 1,
       name: "Card 1",

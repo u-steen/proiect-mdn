@@ -1,3 +1,4 @@
+// o pagina in caz de url nu exista
 import {Link} from 'react-router-dom';
 
 export default function NotFoundPage() {

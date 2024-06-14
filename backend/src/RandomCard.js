@@ -1,4 +1,5 @@
-const cards = require('./Cards');
+
+const cards = require('./cards');
 const crypto = require('crypto');
 
 

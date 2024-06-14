@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
 app.use('/api/users', userRoutes);
 app.use('/api/game', gameRoutes);
 app.use('/api/cards', cardRoutes);
-app.use('/api/card', cardRoutes);
+app.use('/api/card', cardsRoutes);
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
