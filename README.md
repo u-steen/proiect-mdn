@@ -115,3 +115,4 @@ Functiile handleDraw, handleEndTurn, handleRemoveCard pot fi considerate o imple
 
 
 ## Demo:
+https://youtu.be/p8pnDkGqMkA
