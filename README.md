@@ -112,3 +112,6 @@ Exemplu pentru main.jsx din frontend:
 ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/db69b81f-d161-469d-aa12-3d444b6c230e)
 ##### 4. Un fel de strategy pattern:
 Functiile handleDraw, handleEndTurn, handleRemoveCard pot fi considerate o implementare a strategy pattern. Fiecare functie implementeaza o strategie diferita pentru gestionarea jocului, cum ar fi extragerea unei carti, terminarea turei sau eliminarea unei carti. ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/af6ec3ff-efc5-4ed8-852e-f468ddc3dfd2)
+
+
+## Demo:
