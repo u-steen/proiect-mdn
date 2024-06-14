@@ -1,6 +1,6 @@
 const React = require('react');
 const { render, screen } = require('@testing-library/react');
-const Game = require('../src/Game').default; // Obținem componenta implicită exportată
+const Game = require('../src/Game.jsx').default; // Obținem componenta implicită exportată
 
 describe('Game Component', () => {
   test('should distribute correct cards to Walter', () => {
