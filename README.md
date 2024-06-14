@@ -95,9 +95,11 @@ Am incercat sa implementam testele automate dar nu au functionat, dar a mers dac
 
 ### Cometarii cod
 #### Codul este comentat in fiecare fisier pentru usurinta folosind Chat-GPT.
+
 Exemplu pentru un program mic folosit in backend:
 ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/1e343424-21e6-4d21-9964-c217edfc8853)
 ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/0432211e-35a1-4bf7-8ab9-744ae29739d5)
+
 Exemplu pentru main.jsx din frontend:
 ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/17a61cb9-b61c-4791-937e-4eb7c8094c42)
 
