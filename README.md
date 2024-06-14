@@ -106,11 +106,9 @@ Exemplu pentru main.jsx din frontend:
 
 ### Design patterns
 #### Cateva exeple:
-
-1. Folosirea separata a componentelor in react: ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/7fd9e2b1-610a-4d65-a7de-8fc1afe87238)
-
-2. Utilizarera starilor: ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/db69b81f-d161-469d-aa12-3d444b6c230e)
-
-3. Un fel de strategy pattern:
-
+##### 1. Folosirea separata a componentelor in react:
+![image](https://github.com/u-steen/proiect-mdn/assets/156594958/7fd9e2b1-610a-4d65-a7de-8fc1afe87238)
+##### 3. Utilizarera starilor:
+![image](https://github.com/u-steen/proiect-mdn/assets/156594958/db69b81f-d161-469d-aa12-3d444b6c230e)
+##### 4. Un fel de strategy pattern:
 Functiile handleDraw, handleEndTurn, handleRemoveCard pot fi considerate o implementare a strategy pattern. Fiecare functie implementeaza o strategie diferita pentru gestionarea jocului, cum ar fi extragerea unei carti, terminarea turei sau eliminarea unei carti. ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/af6ec3ff-efc5-4ed8-852e-f468ddc3dfd2)
