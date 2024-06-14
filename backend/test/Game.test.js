@@ -1,6 +1,6 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Game from '../src/Game';
+const React = require('react');
+const { render, screen } = require('@testing-library/react');
+const Game = require('../src/Game').default; // Obținem componenta implicită exportată
 
 describe('Game Component', () => {
   test('should distribute correct cards to Walter', () => {

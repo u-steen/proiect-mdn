@@ -1,6 +1,6 @@
-import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
-import Homepage from '../src/components/Pages/Homepage'; // Asigură-te că calea este corectă
+const React = require('react');
+const { render, fireEvent, screen } = require('@testing-library/react');
+const Homepage = require('../src/components/Pages/Homepage').default; // Obținem componenta implicită exportată
 
 describe('Homepage Component', () => {
     test('should render Homepage component correctly', () => {
