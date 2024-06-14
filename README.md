@@ -1,38 +1,38 @@
 # Proiect MDS
 
-### Structura (simplificata) fisierului proiectului
-proiect-mdn-main
-├── .github
-│   └── workflows
-│       └── tests.yml
-├── backend
-│   ├── config
-│   ├── database
-│   ├── routes
-│   ├── src
-├── frontend
-│   ├── node_modules
-│   ├── public
-│   ├── src
-│   │   ├── assets
-│   │   ├── components
-│   │   │   ├── Pages
-│   │   │   ├── Card
-│   │   │   ├── Cards
-│   │   │   ├── Deck
-│   │   │   ├── EndPage
-│   │   │   ├── EndTurnButton
-│   │   │   ├── Healthbar
-│   │   │   ├── HomePage
-│   │   │   ├── ManaBar
-│   │   │   ├── NotFoundPage
-│   │   ├── Game.jsx
-│   │   ├── index.css
-│   │   ├── main.jsx
-│   │   └── test
-│   │       └── Game.test.js
-│   └──
-└──
+### Structura (simplificată) fișierelor proiectului
+
+- proiect-mdn-main
+  - .github
+    - workflows
+      - tests.yml
+  - backend
+    - config
+    - database
+    - routes
+    - src
+  - frontend
+    - node_modules
+    - public
+    - src
+      - assets
+      - components
+        - Pages
+        - Card
+        - Cards
+        - Deck
+        - EndPage
+        - EndTurnButton
+        - Healthbar
+        - HomePage
+        - ManaBar
+        - NotFoundPage
+      - Game.jsx
+      - index.css
+      - main.jsx
+      - test
+        - Game.test.js
+
 
 ### Cum se ruleaza:
 
