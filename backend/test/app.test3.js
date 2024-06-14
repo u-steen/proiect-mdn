@@ -1,7 +1,7 @@
 // gameRoutes.test.js
 import request from 'supertest';
 import express from 'express';
-import router from '../routes/gameRoutes';
+import router from '../routes/gameRoutes.js';
 import { expect } from 'chai';
 
 const app = express();

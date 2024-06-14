@@ -1,7 +1,7 @@
 // cardRoutes.test.js
 import request from 'supertest';
 import express from 'express';
-import router from '../routes/cardRoutes';
+import router from '../routes/cardRoutes.js';
 import { expect } from 'chai';
 
 const app = express();
