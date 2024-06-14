@@ -24,3 +24,4 @@ backend/
 
 npm install --save-dev @babel/register @babel/core @babel/preset-env
 npm install --save-dev mocha chai
+npm install supertest --save-dev
