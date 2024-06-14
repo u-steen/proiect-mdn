@@ -22,7 +22,7 @@ backend/
 |-- server.js
 
 
-npm install --save-dev @babel/register @babel/core @babel/preset-env
 npm install --save-dev mocha chai
 npm install supertest --save-dev
 npm install @testing-library/react jest
+npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/preset-react @babel/register
