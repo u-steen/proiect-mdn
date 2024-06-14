@@ -5,6 +5,7 @@ import "./index.css";
 import Homepage from './components/HomePage/Homepage';
 import Endpage from './components/EndPage/Endpage';
 import Game from './Game';
+import Chat from './Chat'; 
 import Notfound from './components/NotFoundPage/NotFoundPage';
 
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
   path: "/endpage",
   element: <Endpage />
+},
+  {
+  path: "/chat",
+  element: <Chat />
 }
 ]);
 
