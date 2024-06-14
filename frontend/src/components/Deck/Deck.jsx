@@ -1,6 +1,7 @@
 // Deck.jsx
 import React from "react";
 
+//componenta care reprezinta un deck din care putem trage o carte random pentru a juca in continuare
 const Deck = ({ drawCallback }) => {
   const drawCard = () => {
     console.log("Drew a card");

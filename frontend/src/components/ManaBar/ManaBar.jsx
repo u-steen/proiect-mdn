@@ -1,5 +1,6 @@
 import React from "react";
 
+//Componenta care reprezinta o bara de mana de maxim 20. Mana este folosita pentru toate actiunile playerului
 const ManaBar = ({ mana }) => {
     const manaPercentage = (mana / 20) * 100;
 

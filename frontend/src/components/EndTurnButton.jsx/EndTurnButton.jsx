@@ -1,6 +1,7 @@
 // EndTurnButton.jsx
 import React from "react";
 
+//componenta care reprezinta un buton pe care il apasam pentru a ne termina tura
 const EndTurnButton = ({ endTurnCallback }) => {
   const handleEndTurn = () => {
     endTurnCallback(); // Apelăm funcția de callback pentru a semnala că s-a terminat tura
