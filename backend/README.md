@@ -20,3 +20,7 @@ backend/
 |-- package-lock.json
 |-- package.json
 |-- server.js
+
+
+npm install --save-dev @babel/register @babel/core @babel/preset-env
+npm install --save-dev mocha chai
