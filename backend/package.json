@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require @babel/register --timeout 10000 'test/**/*.test.js'"
+    "test": "jest"
+  },
+  "jest": {
+  "testEnvironment": "jsdom"
   },
   "keywords": [],
   "author": "",
