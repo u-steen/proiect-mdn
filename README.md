@@ -80,7 +80,7 @@ Modificarile proiectului au fost gestionate in totalitate pe github.
 
 
 ### Teste automate
-Am incercat sa implementam testele automate dar nu au functionat, testele siple:
+Am incercat sa implementam testele automate dar nu au functionat, dar a mers daca faceam niste teste simple:
 ![image](https://github.com/u-steen/proiect-mdn/assets/156594958/81cc3585-060b-429c-86d8-bf67e546af62)
 
 
