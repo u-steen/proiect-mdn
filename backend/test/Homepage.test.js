@@ -1,6 +1,6 @@
 const React = require('react');
 const { render, fireEvent, screen } = require('@testing-library/react');
-const Homepage = require('../src/components/Pages/Homepage.jsx').default; // Obținem componenta implicită exportată
+const Homepage = require('../frontend/src/components/Pages/Homepage.jsx').default; // Obținem componenta implicită exportată
 
 describe('Homepage Component', () => {
     test('should render Homepage component correctly', () => {
