@@ -1,16 +1,20 @@
-// backend/test/db.test.js
+// cardRoutes.test.js
+import request from 'supertest';
+import express from 'express';
+import router from '../routes/cardRoutes';
 import { expect } from 'chai';
-import connection from '../config/db';
 
-describe('Database Connection', () => {
-  it('should connect to the database', (done) => {
-    connection.connect((err) => {
-      expect(err).to.be.null;
-      done();
-    });
-  });
+const app = express();
+app.use('/', router);
 
-  after((done) => {
-    connection.end(done);
+describe('GET /', () => {
+  it('should return a card ID', (done) => {
+    request(app)
+      .get('/')
+      .end((err, res) => {
+        expect(res.status).to.equal(200);
+        expect(res.body).to.have.property('id');
+        done();
+      });
   });
 });
