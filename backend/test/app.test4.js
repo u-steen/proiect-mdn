@@ -1,8 +1,8 @@
 // backend/test/gameRoutes.test.js
-const request = require('supertest');
-const express = require('express');
-const router = require('../routes/gameRoutes');
-const { expect } = require('chai');
+import request from 'supertest';
+import express from 'express';
+import router from '../routes/gameRoutes';
+import { expect } from 'chai';
 
 const app = express();
 app.use('/games', router);

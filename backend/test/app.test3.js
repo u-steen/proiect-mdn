@@ -1,8 +1,8 @@
 // backend/test/cards.test.js
-const request = require('supertest');
-const express = require('express');
-const router = require('../routes/card');
-const { expect } = require('chai');
+import request from 'supertest';
+import express from 'express';
+import router from '../routes/card';
+import { expect } from 'chai';
 
 const app = express();
 app.use('/cards', router);

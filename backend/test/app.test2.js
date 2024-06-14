@@ -1,6 +1,6 @@
 // backend/test/db.test.js
-const { expect } = require('chai');
-const connection = require('../config/db');
+import { expect } from 'chai';
+import connection from '../config/db';
 
 describe('Database Connection', () => {
   it('should connect to the database', (done) => {
