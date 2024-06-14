@@ -1,0 +1,36 @@
+Structura Proiectului:
+proiect-mdn-main
+    backend
+        config: db.js
+        database: database.sql
+        routes: card.js, cardRoutes.js, gameRoutes.js, userRoutes.js
+        src: cards.js, RandomCard.js
+        test: app.test1.js
+        package.json
+        pacjage-lock.json
+        readme.md
+        server.js
+    frontend
+        node_modules
+        public
+        src
+            assets
+            components
+                Pages
+                Card
+                Cards
+                Deck
+                EndPage
+                EndTurnButton
+                Healthbar
+                HomePage
+                ManaBar
+                NotFoundPage
+            Game.jsx
+            index.css
+            main.jsx
+        etc...
+
+
+
+

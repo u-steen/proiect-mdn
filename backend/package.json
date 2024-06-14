@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "not-a-test": "echo 'This is not a test'"
+    "test": "mocha --recursive"
   },
   "keywords": [],
   "author": "",
